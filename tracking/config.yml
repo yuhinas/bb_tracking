@@ -1,0 +1,109 @@
+# General
+device: 0  # "cpu" or cuda number
+mode: "class"  # tracking mode: "class" or "id"
+batch_size: 16
+center_crop_4x3: True
+draw_mouse: False
+mouse_frequency: 30  # number of frames for one mouse detecting
+
+video_dict: "../output/video_list/tracking_list.json"
+output_dir: "../output"
+
+# Class Dict
+classes:  # id: name
+    0: "H"
+    1: "O"
+    2: "X"
+    3: "nn"
+    4: "ss"
+    5: "xx"
+
+
+Tracker:                                                    
+    match_threshold: 0.2
+    weights:
+        - 0.6  # class scores
+        - 0.4  # iou scores
+
+
+IDTracker:
+    iou_threshold: 0.1  # threshold of unmatched criterion
+    class_threshold: 0.1
+    kill_threshold: 15  # kill the track after N frame absent
+    
+
+Detector:
+    # Setting
+    state_dict_path: "data/211009-yolo.pth"
+    score_threshold: 0.5
+    nms_iou_threshold: 0.3
+    
+    # Model
+    input_size: [672, 512]  # width, height
+    anchor_numbers: 6
+    
+    # Training
+    training_data_list: "data/yolo-scc-dataset.txt"
+    total_epoch: 100
+    freeze_batch_size: 48
+    unfreeze_epoch: 40  # unfreeze the backbone at the Nth epoch, set 1 for no freeze training
+    unfreeze_batch_size: 6  # should much less than freeze batch size
+    learning_rate: 0.0001
+    lr_decay: 0.95
+    num_workers: 16
+    validation_ratio: 0.1
+    pretrained: null  # path of pretrained state dict
+    keep_pth: "best"  # all, best, false
+    
+    # Assessment
+    testing_data_list: "data/yolo-scc-dataset.txt"
+    testing_batch_size: 2
+    testing_iou_threshold: 0.3
+
+
+Classifier:
+    # Setting
+    state_dict_path: "data/211015-resnet.pth"
+    threshold: 0.5  # threshold for unknown
+    
+    # Model
+    model: "default"  # default, official-18, official-34, official-50
+    input_size: [64, 64]  # width, height
+        
+    # Training
+    training_data_folders: "data/resnet-6cls-no-unknown.txt"
+    epoch: 500
+    training_batch_size: 512
+    learning_rate: 0.0001
+    num_workers: 32
+    validation_ratio: 0.1
+    pretrained: null  # path of pretrained state dict
+    keep_pth: "best"  # all, best, false
+    
+    # Assessment
+    testing_data_folder: "data/resnet-6cls-no-unknown.txt"
+    testing_batch_size: 512
+    
+
+Segmenter:
+    # Setting
+    state_dict_path: "data/211009-unet.pth"
+    
+    # Model
+    model: "default"  # default, official
+    input_size: [336, 256]  # width, height
+    
+    # Training
+    training_data_list: "data/unet-dataset.txt"
+    epoch: 200
+    training_batch_size: 8
+    learning_rate: 0.00001
+    num_workers: 16
+    validation_ratio: 0.1
+    n_quick_results: 2  # int
+    pretrained: null  # path of pretrained state dict
+    keep_pth: "best"  # all, best, false
+    
+    # Assessment
+    testing_data_list: "data/unet-dataset.txt"
+    testing_batch_size: 2
