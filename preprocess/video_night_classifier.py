@@ -5,7 +5,7 @@ import re
 
 # Configuration
 TARGET_DIR = '../video/'  # Target directory, please use ABSOLUTE paths
-OUTPUT_JSON = '../output/video_list/tracking_list.json'  # Output filename
+OUTPUT_JSON = '../output/video-list/tracking_list.json'  # Output filename
 target_dir = []
              # Target directories without "n", if just need to handle certain directories
              # Example: only process folders n7141 and n7142 → set as [7141, 7142]
