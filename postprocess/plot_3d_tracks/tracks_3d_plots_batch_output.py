@@ -10,7 +10,7 @@ import os
 
 # path
 RAW_TRACK_DIR = '../../output/raw-tracks'
-OUTPUT_DIR = '../../output/tracks_3d_plots'
+OUTPUT_DIR = '../../output/tracks-3d-plots'
 
 # fixed config
 markers = ['O', 'X', 'nn', 'H', 'ss', 'xx']
