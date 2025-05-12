@@ -38,9 +38,12 @@ The tracking pipeline consists of three stages: preprocess, tracking, and postpr
 - **count_on_mouse.py**  
   Calculates how long each beetle stays on the mouse, based on raw tracking data.  
   Also provides hourly summaries.
+  You can specify the analysis time range.
 
 - **active_radius_SpecifiedStartEnd.py**  
-  Analyzes beetle movement deviation and estimates social ranks. Also outputs 2D plots of Positional Deviation Index over time for each experiment.
+  Analyzes beetle movement deviation and estimates social ranks.
+  outputs 2D plots of Positional Deviation Index over time for each experiment.  
+  You can set which experiments and time range to include.
 
 - **merge_csv.py**  
   Merges all relevant CSV files into a single `merged_data.csv` summary table that can be used for further statistical analysis.
