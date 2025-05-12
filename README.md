@@ -8,6 +8,8 @@ Place all model weight files (`.pth` files) in the `tracking/data/` directory. T
 
 A sample `.mp4` video is also provided for demonstration purposes. Place it in the `video/n7141/` directory. You may choose to skip this video if you plan to use your own data, but make sure to follow the required folder structure: each experiment should be placed in a separate `nXXXX` folder under `video/`.
 
+Note: Some folders (e.g., `tracking/data/`, `video/n7141`) are included with `.gitkeep` files to ensure structure. Please place your actual data in these directories.
+
 ## Features
 The tracking pipeline consists of three stages: preprocess, tracking, and postprocess.
 
