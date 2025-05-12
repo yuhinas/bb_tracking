@@ -64,9 +64,12 @@ All scripts in this project can be executed using the following format:
 ```bash
 python path/to/script.py
 ```
+
 The only exception is `tracking/track.py`, which requires a YAML configuration file as an argument:  
 ```bash
 python track.py config.yml
 ```
+
+(Optional) If you want to directly inspect tracking results from video frames, you can refer to `tracking/script_output_tracked_video.ipynb`. The relevant code cells are provided for reference and should be copied into a `.py` script for execution.
 
 ## License
