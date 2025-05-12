@@ -58,6 +58,15 @@ The tracking pipeline consists of three stages: preprocess, tracking, and postpr
 
 
 ## Usage
+The full pipeline consists of three stages: Preprocess → Tracking → Postprocess (count_on_mouse, active_radius_analysis → analysis_merge).
 
+All scripts in this project can be executed using the following format:  
+```bash
+python path/to/script.py
+```
+The only exception is `tracking/track.py`, which requires a YAML configuration file as an argument:  
+```bash
+python track.py config.yml
+```
 
 ## License
