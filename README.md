@@ -41,7 +41,7 @@ The tracking pipeline consists of three stages: preprocess, tracking, and postpr
   You can specify the analysis time range.
 
 - **active_radius_SpecifiedStartEnd.py**  
-  Analyzes beetle movement deviation and estimates social ranks.
+  Analyzes beetle movement deviation and estimates social ranks.  
   outputs 2D plots of Positional Deviation Index over time for each experiment.  
   You can set which experiments and time range to include.
 
