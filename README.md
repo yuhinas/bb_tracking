@@ -1,6 +1,8 @@
 # Burying Beetle Tracking and Ranking
 This project is designed to track the movement of burying beetles and the position of mouse during behavioural experiments. Based on the tracking results, it calculates the amount of time each beetle spends on the mouse and analyzes beetle tracks to estimate and infer their social rank.
 
+The tracking pipeline is composed of three modules: UNet Segmentor for mouse segmentation, YOLOv4 Detector for bounding box extraction, and ResNet Classifier for assigning labels to detected objects.
+
 ## Required Data
 Please download the [required data](https://drive.google.com/drive/folders/1vGJgGVYwupqA06Lj6wFC9Ki-DBtZDRHL?usp=drive_link) first.
 
