@@ -1,4 +1,4 @@
-Please download all model weight files (.pth files) [HERE](https://drive.google.com/drive/folders/1vGJgGVYwupqA06Lj6wFC9Ki-DBtZDRHL?usp=drive_link). Once downloaded, place the files in the tracking/data/ directory. These files are required for the project to run properly.
+Please download all model weight files (`.pth` files) [HERE](https://drive.google.com/drive/folders/1vGJgGVYwupqA06Lj6wFC9Ki-DBtZDRHL?usp=drive_link). Once downloaded, place the files in the `tracking/data/` directory. These files are required for the project to run properly.
 
 
 ---
