@@ -25,7 +25,7 @@ The tracking pipeline consists of three stages: preprocess, tracking, and postpr
   You can set which experiments and time range to include.
 
 ### Tracking (Burying Beetle and Mouse Detection)  
-You may skip `train.py` and `assess.py` by directly using the pre-trained models with track.py for tracking.
+You may skip `train.py` and `assess.py` by directly using the pre-trained models with `track.py` for tracking.
 
 - **`train.py`**  
   Unified training script that supports U-Net for segmentation, YOLOv4 for object detection, and ResNet for classification.
