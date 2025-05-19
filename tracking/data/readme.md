@@ -22,10 +22,10 @@ All class_id values are 0, indicating beetles.
 
 [resnet-dataset.txt]
 
-class_id: label
-0: H
-1: O
-2: X
-3: nn
-4: ss
+class_id: label  
+0: H  
+1: O  
+2: X  
+3: nn  
+4: ss  
 5: xx
