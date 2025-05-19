@@ -1,3 +1,9 @@
+This folder contains a sample training dataset to demonstrate the folder structure. To access the full training dataset, please download it from [HERE](https://drive.google.com/drive/folders/1vGJgGVYwupqA06Lj6wFC9Ki-DBtZDRHL?usp=drive_link). After downloading, unzip the file and use it to replace the existing `tracking/training_dataset` folder.
+
+
+---
+
+
 [dataset-beetle-box]
 
 All "label" values in json are "0", indicating beetles.
