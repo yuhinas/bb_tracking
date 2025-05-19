@@ -32,12 +32,15 @@ You may skip `train.py` and `assess.py` by directly using the pre-trained models
   
 - **`assess.py`**  
   Unified evaluation script for three model types:  
-  - Segmenter  
-    Computes mean Intersection over Union (mIoU) between predicted and ground truth masks. Outputs include a histogram of mIoU scores and a CSV summary.
-  - Detector  
-    Assesses object detection performance using precision-recall analysis. Matches predicted boxes with ground truth via IoU thresholding and outputs a Precision–Recall curve.  
-  - Classifier  
-    Evaluates classification accuracy and generates a normalized confusion matrix with per-class performance. Visualization is provided as a heatmap-style matrix.
+  - **Segmenter**  
+    Computes mean Intersection over Union (mIoU) between predicted and ground truth masks.  
+    Outputs include a histogram of mIoU scores and a CSV summary.
+  - **Detector**  
+    Assesses object detection performance using precision-recall analysis.  
+    Matches predicted boxes with ground truth via IoU thresholding and outputs a Precision–Recall curve.  
+  - **Classifier**  
+    Evaluates classification accuracy and generates a normalized confusion matrix with per-class performance.  
+    Visualization is provided as a heatmap-style matrix.
    
 - **`track.py`**  
   Detects burying beetles and records mouse positions and body area.  
