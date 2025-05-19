@@ -6,7 +6,7 @@ center_crop_4x3: True
 draw_mouse: False
 mouse_frequency: 30  # number of frames for one mouse detecting
 
-video_dict: "../output/video_list/tracking_list.json"
+video_dict: "../output/video-list/tracking_list.json"
 output_dir: "../output"
 
 # Class Dict
@@ -43,7 +43,7 @@ Detector:
     anchor_numbers: 6
     
     # Training
-    training_data_list: "data/yolo-scc-dataset.txt"
+    training_data_list: "data/yolo-dataset.txt"
     total_epoch: 100
     freeze_batch_size: 48
     unfreeze_epoch: 40  # unfreeze the backbone at the Nth epoch, set 1 for no freeze training
@@ -56,7 +56,7 @@ Detector:
     keep_pth: "best"  # all, best, false
     
     # Assessment
-    testing_data_list: "data/yolo-scc-dataset.txt"
+    testing_data_list: "data/yolo-dataset.txt"
     testing_batch_size: 2
     testing_iou_threshold: 0.3
 
@@ -71,7 +71,7 @@ Classifier:
     input_size: [64, 64]  # width, height
         
     # Training
-    training_data_folders: "data/resnet-6cls-no-unknown.txt"
+    training_data_folders: "data/resnet-dataset.txt"
     epoch: 500
     training_batch_size: 512
     learning_rate: 0.0001
@@ -81,7 +81,7 @@ Classifier:
     keep_pth: "best"  # all, best, false
     
     # Assessment
-    testing_data_folder: "data/resnet-6cls-no-unknown.txt"
+    testing_data_folder: "data/resnet-dataset.txt"
     testing_batch_size: 512
     
 
