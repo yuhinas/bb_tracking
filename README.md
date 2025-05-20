@@ -71,7 +71,16 @@ You may skip `train.py` and `assess.py` by directly using the pre-trained models
   Generates 3D plots of beetle tracks in batch.
 
 ## Requirements
+### Software Requirements  
+- Python 3.8+
+- PyTorch 2.2.2
+- torchvision 0.17.2
+- OpenCV (opencv-python 4.10.0.84)
+- matplotlib, numpy, Pillow, PyYAML
+- tqdm (for progress bar)
 
+### Hardware Requirements
+- NVIDIA GPU with CUDA support
 
 ## Installation
 
