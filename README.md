@@ -77,7 +77,7 @@ You may skip `train.py` and `assess.py` by directly using the pre-trained models
 
 
 ## Usage
-The full pipeline consists of three stages: Preprocess → Tracking → Postprocess (count_on_mouse, active_radius_analysis → analysis_merge).
+The full tracking pipeline consists of three stages: Preprocess → Tracking → Postprocess (count_on_mouse, active_radius_analysis → analysis_merge).
 
 - **`tracking/track.py`**  
   Requires a YAML configuration file.  
