@@ -83,7 +83,15 @@ You may skip `train.py` and `assess.py` by directly using the pre-trained models
 - NVIDIA GPU with CUDA support
 
 ## Installation
+This project requires a CUDA-compatible NVIDIA GPU. CPU-only environments are not supported.
 
+Install PyTorch with CUDA 12.1 support (compatible with your driver):
+
+```bash
+pip install torch==2.2.2 torchvision==0.17.2 --index-url https://download.pytorch.org/whl/cu121
+pip install -r requirements.txt
+```
+If you accidentally installed CPU-only PyTorch (e.g. via pip install -r requirements.txt first), uninstall it with pip uninstall torch torchvision and then reinstall using the command above.
 
 ## Usage
 The full tracking pipeline consists of three stages: Preprocess → Tracking → Postprocess (count_on_mouse, active_radius_analysis → analysis_merge).
