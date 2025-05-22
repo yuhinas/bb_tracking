@@ -121,5 +121,3 @@ The full tracking pipeline consists of three stages: Preprocess → Tracking →
   ```
 
 - If you want to directly inspect tracking results from video frames, you can refer to `tracking/script_output_tracked_video.ipynb`. The relevant code cells are provided for reference and should be copied into a `.py` script for execution.
-
-## License
